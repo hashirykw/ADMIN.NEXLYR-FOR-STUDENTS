@@ -1,0 +1,16 @@
+# Nexlyr for Students · Supabase CLI config (only the parts that differ from defaults).
+# Each function checks the caller itself, so gateway JWT checks are off: this also lets the new
+# sb_publishable_ keys (which are not JWTs) call them.
+project_id = "nexlyr-for-students"
+
+[functions.register]
+verify_jwt = false
+
+[functions.payment]
+verify_jwt = false
+
+[functions.admin]
+verify_jwt = false
+
+[functions.ai-check]
+verify_jwt = false
